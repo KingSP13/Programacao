@@ -1,0 +1,77 @@
+simplificando operadores aritméticos
+
+
+var n = 3
+n = n + 4	n += 4
+n = n - 5	n -+ 5
+n = n * 4	n *= 4
+n = n / 2	n /= 2
+n = n **2	n **= 2
+n = n % 5	n %= 5
+
+OPERADORES DE INCREMENTO
+
+++	--
+var x = 2
+x++ = 3
+
+Caso mais de um operador aritmético seja usado na mesma expressão, a ordem de execução é a seguinte:
+
+() > ** > /
+> < >= -NÃO TENM ORDEM DE PRECEDÊNCIA EM OPERADORES RELACIONAIS
+
+
+OPERADORES RELACIONAIS
+
+! (não) - Negação (Para qualquer condição exceto... ! )
+&& (e) - Conjunção (Para todas as condições, em ambos os lados da operação &&)
+|| (ou) - Disjunção (Para qualquer uma das operações em ambos os lados || )
+
+No caso de uso de operadores aritmeticos, relacionais e lógicos
+a Ordem a ser seguida é: ARITMÉTICOS > RELACIONAIS > LÓGICOS
+
+Caso mais de um operador seja usado na mesma expressão, a ordem de execução é sempre: NÃO, E e OU.
+! > && > ||
+
+
+Utilizando o DOM :
+
+Document Object Model
+
+Exemplo de código:
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <div>
+        <p>
+            Aqui vai o resultado
+        </p>
+        <p>
+            Aprendendo a usar <strong>DOM</strong>
+        </p>
+        <p>
+            Clique em mim.
+        </p>
+    </div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write('Meu elemento P1 contém = '+ p1.innerText)
+        document.body.style.background = 'grey'
+        p1.style.color = 'lightgreen'
+    </script>
+</body>
+
+Esquema de mapa:
+
+window:
+	location
+
+					  ----- title
+				---- head ----- meta	
+	document ------ html 
+					
+			     	---- body -----h1
+					  -----p
+					  -----p -----strong
+					  -----div
+	history

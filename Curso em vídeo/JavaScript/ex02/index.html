@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de variável</title>
+</head>
+<body>
+    <h1>
+        Olá Mundo !
+    </h1>
+    
+    <script>
+        var nome = prompt('Qual seu nome ?')
+        var n1 = Number.parseInt(prompt('Digite um Número:'))
+        var n2 = Number.parseInt(prompt('Digite outro Número:'))
+        var soma = n1 + n2
+
+        alert(`A soma de ${n1} e ${n2} é igual a ${soma} !`) /*Outra forma de declarar variaveis no seu texto é com uso de Crase (`) e a variavel seguindo um Sifrão $ entre chaves {},conhecido como Placeholder, mais fácil digitação e código mais limpo, famosa Template String*/
+        alert('Seja muito bem-vindo(a), ' + nome +'. É um prazer. :)') /* concatenação com + */
+        n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+    </script>
+</body>
+</html>
