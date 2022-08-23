@@ -5,7 +5,7 @@ console.log(velocity == 90) //false
 console.log(velocity == "Golias") //false
 console.log(velocity == "80") //true
 console.log(velocity === "80")//false, numérico 80 contra string 80
-console.log(velocity != 80)//false, sinal de diferenã
+console.log(velocity != 80)//false, sinal de diferença
 console.log(velocity != 70)//true
 console.log(velocity != "80")//false
 console.log(velocity !== "80")//true, 80 number da variavel é diferente de 80 de tipo texto

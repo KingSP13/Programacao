@@ -8,9 +8,9 @@
 
 //EXEMPLO: 
 
-var finalScore = 500
+let finalScore = 600
 
-console.log(finalScore >= 400?"Congrats":"You Failed")
+finalScore >= 400   ?   console.log("Congrats"): console.log("You Failed")
 //'Congrats'
 
 //variável finalScore maior que 400 portanto retornando 'true'
