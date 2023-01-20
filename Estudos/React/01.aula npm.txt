@@ -1,0 +1,84 @@
+npm 
+
+utilizado principalmente por conta do pré-processador CSS, Sass(escreve codigo css mais rapido e mais eficientemente que o CSS puro).
+
+Sass nao é lido diretamente pelo browser te levando assim a usar uma ferramenta pra converte-lo em código CSS, no caso "Gulp", e é necessário npm pra instalar e rodar gulp no workflow, npm é grande parte do ecossistema JavaScript atualmente sendo assim é uma boa skill pra se ter.
+
+O QUE É O NPM ?
+
+npm é um gerenciador de pacotes para o node.js grande repositório de projetos open source e gratuito, ele seerve basicamente como uma biblioteca de código onde voce nao precisa "construir o carro do zero", ao inves de minerar ferro e coletar petróleo pros pneus, ele te da as peças principais ja montadas com código que outra pessoa escreveu assim nao te forçando a escrever cada linha de código
+
+
+
+DEPENDÊNCIAS
+
+npm instala pacotes de terceiros e sempre possui um campo descrito como dependências, por se tratar de códigos de terceiros eles passam por atualizações e nem sempre podem ser compatíveis com as funções que voce vem a utilizar no seu projeto, cada um individualmente desenvolvido tem um reparo também individual
+
+
+
+
+COMANDOS DO npm
+
+- npm instal chalk
+(instala o pacote "CHALK" que contem dependências, mas sendo assim uma instalação local, que só é valido no diretório interno do projeto em que for instalado)
+
+- npm install -g gulp-cli
+realiza a instalação do pacote "Gulp" globalmente, podendo assim ser incorporado em qualquer parte do projeto e de qualquer diretório
+
+- npm init
+(cria o arquivo .json que contem informações sobre os pacotes utilizados, .json esse que pode ser usado na clonagem de repositórios pra que a clonagem seja efetiva fazendo assim que a instalação seja uniforme no caso da clonagem e leve todos os pacotes utilizados de uma vez)
+
+- npm init -y 
+(mesmo comando que o de cima mas sem a configuração manual)
+
+- npm list 
+(lista os pacotes instalados no projeto em questao.
+
+- npm view chalk versions
+(exibe todas as versões do pacote em  questão desde a origem)
+os numeros de versões podem parecer confusos mas os pacotes npm seguem versionamento sistêmico, que é baseado numa cadeia de versões de 3 digitos separados por pontos
+primeiro dígito é o numero major da versão, o segundo sendo o numero minor e o terceiro a vesão do patch
+
+- npm update
+instala atualizações MINOR e PATCHS nos pacotes instalados, mas nao instala updates MAJOR(conferir ORIENTAÇÃO SOBRE UPDATES)
+
+- npm install chalk@latest
+comando para atualização manual de update MAJOR
+
+- npm install chalk@5
+exemplo de comando caso precise de uma versao mais velha do update MAJOR 5.0.0
+
+- npm install chalk@2
+útil caso alguma dependencia específica parar de funcionar em dado momento e precise fazer um downgrade
+
+- npm install chalk@~2.2
+útil caso alguma dependencia específica parar de funcionar em dado momento e precise fazer um downgrade específico de versão
+
+UPDATES MAJOR
+ocorrem com grandes mudanças e geralmente nao tem retrocompatibilidade
+o que significa que na maioria das vezes deve quebrar o código antigo (lembrar de dependências)
+
+UPDATES MINOR
+ocorrrem com mais frequência porém nao costumam quebrar código já escrito nem mudar a semântica de comandos(idealmente)
+
+PATCH
+basicamente ajustes e reparo de bugs e normalmente nao quebram nada
+
+ORIENTAÇÃO SOBRE UPDATES
+por padrão o npm vem com um sistema de salva vidas na questão das atualizações te permitindo selecionar a versão desejada pra que seu código nao venha a quebrar ou perder funções por causa da mudança mais drástic anas dependencias
+no arquivo json quando voce instala um pacote, o npm salva o numero especifico da versão que voce instalou
+ex.:
+"keywords": [],
+"author": "",
+"license": "ISC",
+"dependencies": {
+	"chalk": "_^_4.1.1"
+	}
+
+-underline só pra evidenciar o circunflexo.
+significa que vai atualizar automaticamente a versão em todo patch e update MINOR, é um prefixo padrão que o npm impõe na versão MAJOR instalada
+
+
+PACAGE-LOCK json FILE
+armazena todas as versões atuais e específicas de cada pacote e dependências que voce tem instalado no computador localmente, esse arquivo existe para caso algum problema apareça usando o arquivo package.json para instalação em massa em outro hambiente
+por exemplo se usar o arquivo package.json para instalação em massa e houver algum update MINOR no pacote ou nas dependências que possa comprometer a confiabilidade do projeto como haver incompatibilidade entre dependências por conta das atualizações
